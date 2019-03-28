@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		<p>	<input type="checkbox" name="chk" value="滑雪" />滑雪</p>
+		<p>	<input type="checkbox" name="chk" value="游泳" />游泳</p>
+		<p> <input type="checkbox" name="chk" value="爬山" />爬山</p>
+	    
+	    <p><input name="btn" type="button" onclick="allchecked()" value="全选" /></p>
+	    <p><input name="btn" type="button" onclick="noallchecked()" value="反选" /></p>
+	    <p><input name="btn" type="button" onclick="yeallchecked()" value="取消" /></p>
+	    
+	    
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script>
+		$(document).ready(function(){
+			$("p").css("border","dashed 2px")
+		})
+		function allchecked(){
+//			$("input[type='checkbox']").prop("checked", function( i, val ) {
+//           return !val;
+//             });
+//          $("input[type='checkbox']").prop("checked", false);
+            $("input[type='checkbox']").prop("checked", true);
+		}
+		function noallchecked(){
+			$("input[type='checkbox']").prop("checked", function( i, val ) {
+             return !val;
+               });
+//			$("input[type='checkbox']").prop("checked", false);
+//          $("input[type='checkbox']").prop("checked", true);
+		}
+		function yeallchecked(){
+//			$("input[type='checkbox']").prop("checked", function( i, val ) {
+//           return !val;
+//             });
+			$("input[type='checkbox']").prop("checked", false);
+//          $("input[type='checkbox']").prop("checked", true);
+		}
+	</script>
+</html>
